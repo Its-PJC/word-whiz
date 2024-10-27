@@ -2,25 +2,27 @@ import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import Board from './components/Board';
 import Keyboard from './components/Keyboard';
-import { boardDefault, generateWordSet } from './words';
+import { boardDefault, generateWordSet } from './Words';
 import GameOver from './components/GameOver';
 
 export const AppContext = createContext();
 
 function App() {
-  const correctWord = "RIGHT";
 
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set());
   const [disabledLetters, setDisabledLetter] = useState([]);
   const [gameOver, setGameOver] = useState({ gameOver: false, guessedWord: false });
+  const [correctWord, setCorrectWord] = useState("");
 
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
+      setCorrectWord(words.todaysWord);
     });
   }, []);
+
   const onSelectLetter = (keyValue) => {
     if (currAttempt.letterPos > 4) return;
     const newBoard = [...board];
@@ -28,6 +30,7 @@ function App() {
     setBoard(newBoard);
     setCurrAttempt({ ...currAttempt, letterPos: currAttempt.letterPos + 1 });
   }
+
   const onDelete = () => {
     if (currAttempt.letterPos === 0) return;
     const newBoard = [...board];
@@ -35,6 +38,7 @@ function App() {
     setBoard(newBoard);
     setCurrAttempt({ ...currAttempt, letterPos: currAttempt.letterPos - 1 });
   }
+
   const onEnter = () => {
     if (currAttempt.letterPos !== 5) return;
 
@@ -57,6 +61,7 @@ function App() {
       setGameOver({gameOver:true,guessedWord:false});
     }
   }
+  
   return (
     <div className="App">
       <nav>
