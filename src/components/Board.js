@@ -5,46 +5,46 @@ function Board() {
     // <div>Board</div>
     <div className="board">
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={0}/>
-          <Letter letterPosition={1} atttemptValue={0}/>
-          <Letter letterPosition={2} atttemptValue={0}/>
-          <Letter letterPosition={3} atttemptValue={0}/>
-          <Letter letterPosition={4} atttemptValue={0}/>
+          <Letter letterPosition={0} attemptValue={0}/>
+          <Letter letterPosition={1} attemptValue={0}/>
+          <Letter letterPosition={2} attemptValue={0}/>
+          <Letter letterPosition={3} attemptValue={0}/>
+          <Letter letterPosition={4} attemptValue={0}/>
         </div>
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={1}/>
-          <Letter letterPosition={1} atttemptValue={1}/>
-          <Letter letterPosition={2} atttemptValue={1}/>
-          <Letter letterPosition={3} atttemptValue={1}/>
-          <Letter letterPosition={4} atttemptValue={1}/>
+          <Letter letterPosition={0} attemptValue={1}/>
+          <Letter letterPosition={1} attemptValue={1}/>
+          <Letter letterPosition={2} attemptValue={1}/>
+          <Letter letterPosition={3} attemptValue={1}/>
+          <Letter letterPosition={4} attemptValue={1}/>
         </div>
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={2}/>
-          <Letter letterPosition={1} atttemptValue={2}/>
-          <Letter letterPosition={2} atttemptValue={2}/>
-          <Letter letterPosition={3} atttemptValue={2}/>
-          <Letter letterPosition={4} atttemptValue={2}/>
+          <Letter letterPosition={0} attemptValue={2}/>
+          <Letter letterPosition={1} attemptValue={2}/>
+          <Letter letterPosition={2} attemptValue={2}/>
+          <Letter letterPosition={3} attemptValue={2}/>
+          <Letter letterPosition={4} attemptValue={2}/>
         </div>
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={3}/>
-          <Letter letterPosition={1} atttemptValue={3}/>
-          <Letter letterPosition={2} atttemptValue={3}/>
-          <Letter letterPosition={3} atttemptValue={3}/>
-          <Letter letterPosition={4} atttemptValue={3}/>
+          <Letter letterPosition={0} attemptValue={3}/>
+          <Letter letterPosition={1} attemptValue={3}/>
+          <Letter letterPosition={2} attemptValue={3}/>
+          <Letter letterPosition={3} attemptValue={3}/>
+          <Letter letterPosition={4} attemptValue={3}/>
         </div>
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={4}/>
-          <Letter letterPosition={1} atttemptValue={4}/>
-          <Letter letterPosition={2} atttemptValue={4}/>
-          <Letter letterPosition={3} atttemptValue={4}/>
-          <Letter letterPosition={4} atttemptValue={4}/>
+          <Letter letterPosition={0} attemptValue={4}/>
+          <Letter letterPosition={1} attemptValue={4}/>
+          <Letter letterPosition={2} attemptValue={4}/>
+          <Letter letterPosition={3} attemptValue={4}/>
+          <Letter letterPosition={4} attemptValue={4}/>
         </div>
         <div className="row">
-          <Letter letterPosition={0} atttemptValue={5}/>
-          <Letter letterPosition={1} atttemptValue={5}/>
-          <Letter letterPosition={2} atttemptValue={5}/>
-          <Letter letterPosition={3} atttemptValue={5}/>
-          <Letter letterPosition={4} atttemptValue={5}/>
+          <Letter letterPosition={0} attemptValue={5}/>
+          <Letter letterPosition={1} attemptValue={5}/>
+          <Letter letterPosition={2} attemptValue={5}/>
+          <Letter letterPosition={3} attemptValue={5}/>
+          <Letter letterPosition={4} attemptValue={5}/>
         </div>
     </div>
   )

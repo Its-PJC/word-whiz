@@ -1,13 +1,23 @@
 import { useContext } from 'react';
 import React from 'react'
-import { boardDefault } from '../words'
 import { AppContext } from '../App';
 
-function Letter({letterPosition,atttemptValue}) {
-  const {board} = useContext(AppContext);
-  const letter = board[atttemptValue][letterPosition];
+function Letter({letterPosition,attemptValue}) {
+  const {board,correctWord, currAttempt} = useContext(AppContext);
+  const letter = board[attemptValue][letterPosition];
+
+  const correct = correctWord[letterPosition] === letter;
+  const almost = !correct && letter !== "" && correctWord.includes(letter);
+
+  const letterState = 
+                currAttempt.attempt > attemptValue && 
+                (correct ? "correct" : almost ? "almost" : "error");
+
   return (
-    <div className="letter">{letter}</div>
+    <div className="letter" id={letterState}>
+      {""}
+      {letter}
+    </div>
   )
 }
 
